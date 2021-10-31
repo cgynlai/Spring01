@@ -1,0 +1,15 @@
+[core]
+	symlinks = false
+	repositoryformatversion = 0
+	filemode = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/cgynlai/Spring01
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+	rebase = false
+[gui]
+	wmstate = normal
+	geometry = 893x435+2484+147 175 196
