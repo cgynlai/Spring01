@@ -14,6 +14,7 @@ import com.cyl.demo.service.impl.UserServiceNormal;
 
 @Configuration
 public class AppConfig {
+	//Spring scan 'Bean' and construct object
 	
 	@Bean
 	public UserDao userDaoNormal() {
@@ -21,6 +22,8 @@ public class AppConfig {
 		return new UserDaoNormal();
 	}
 	
+	
+	//Spring use constructed bean 
 	@Bean
 	public UserService userServiceNormal(UserDao userDao) {
 		System.out.println("construct UserService instance ...");
