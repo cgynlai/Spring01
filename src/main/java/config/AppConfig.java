@@ -24,11 +24,18 @@ public class AppConfig {
 	
 	
 	//Spring use constructed bean 
+//	@Bean
+//	public UserService userServiceNormal(UserDao userDao) {
+//		System.out.println("construct UserService instance ...");
+//		//UserDao userDao = userDaoNormal();
+//		return new UserServiceNormal(userDao);
+//	}
+
+	//use setter to instantiate bean with UserDao object
 	@Bean
 	public UserService userServiceNormal(UserDao userDao) {
-		System.out.println("construct UserService instance ...");
-		//UserDao userDao = userDaoNormal();
-		return new UserServiceNormal(userDao);
+	UserServiceNormal userServiceNormal = new UserServiceNormal();
+	userServiceNormal.setUserDao(userDao);
+	return userServiceNormal;
 	}
-
 }

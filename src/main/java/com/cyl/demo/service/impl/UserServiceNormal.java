@@ -14,15 +14,23 @@ public class UserServiceNormal implements UserService {
 		super();
 	}
 	
+	//use constructor to establish relationship with UserDao
 	public UserServiceNormal(UserDao userDao) {
 		this.userDao = userDao;
 	}
 
-
+    //use setter to establish relationship with UserDao
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
 
 	public void add() {
 	
 		userDao.add();
 	}
+
+	
+
+	
 
 }
