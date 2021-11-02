@@ -13,9 +13,9 @@ import config.AppConfig;
 public class UserDaoTest {
 	@Autowired
 	private UserDao userDao;
-
 	@Test
 	public void testAdd() {
 		userDao.add();
 	}
+	
 }
